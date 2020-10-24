@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView ivPostImage;
     private Button btnSubmit;
     private File photoFile;
+    private ProgressBar pbLoad;
     private String photoFileName = "photo.jpg";
 
     @Override
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        pbLoad =findViewById(R.id.pbLoad);
         etDescription = findViewById(R.id.etDescription);
         ivPostImage = findViewById(R.id.ivPostImage);
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "There is no Image!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                pbLoad.setVisibility(ProgressBar.VISIBLE);
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description,currentUser,photoFile);
             }
@@ -168,6 +172,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Error while saving!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                pbLoad.setVisibility(ProgressBar.INVISIBLE);
+                Toast.makeText(MainActivity.this, "Post Save Successful", Toast.LENGTH_SHORT).show();
                 Log.i(TAG, "Post save was successful!");
                 etDescription.setText("");
                 ivPostImage.setImageResource(0);

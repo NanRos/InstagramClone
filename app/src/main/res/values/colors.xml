@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimary">@color/instaBlue</color>
+    <color name="colorPrimaryDark">@color/instaDblue</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="instaRed">#FB3958</color>
+    <color name="instaYellow">#FFC838</color>
+    <color name="instaGreen">#6DC993</color>
+    <color name="instaBlue">#458EFF</color>
+    <color name="instaLbrown">#DED1C1</color>
+    <color name="instaDbrown">#9b6954</color>
+    <color name="instaDblue">#125688</color>
 </resources>
