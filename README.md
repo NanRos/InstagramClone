@@ -33,9 +33,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
--Understanding Parse Library
--Understanding Back4App backend-as-a-service Structure
+Describe any challenges encountered while building the app.   
+- Understanding Parse Library
+- Understanding Back4App backend-as-a-service Structure
 
 ## Open-source libraries used
 
