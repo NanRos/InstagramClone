@@ -10,4 +10,7 @@
     <color name="instaLbrown">#DED1C1</color>
     <color name="instaDbrown">#9b6954</color>
     <color name="instaDblue">#125688</color>
+    <color name="lightGreyWhite">#f1f1f1</color>
+    <color name="medium_gray">#ffaab8c2</color>
+    <color name="darkGray">#838383</color>
 </resources>
